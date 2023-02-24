@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 t = (576, 640)
 
 #inverse midas
-img = cv2.imread('./Evaluation/depth090.png', cv2.IMREAD_ANYDEPTH)
+img = cv2.imread('/depth090.png', cv2.IMREAD_ANYDEPTH)
 
 im1 = cv2.imread('./Evaluation/midas090.png', cv2.IMREAD_ANYDEPTH)
 
@@ -31,22 +31,22 @@ cv2.waitKey()
 #Tcv2.imwrite('./Evaluation/midas_inv090.png', im_inv)
 
 ###################################################################
+
 # Recolte données fusion
 
 
-img = cv2.imread('./Evaluation/depth090.png', cv2.IMREAD_ANYDEPTH)
-img = img[100:400, 310:330]
+img = cv2.imread('./depth090.png', cv2.IMREAD_ANYDEPTH)
+val_truth = []
 
-im1 = cv2.imread('./Evaluation/transform090.png', cv2.IMREAD_ANYDEPTH)
-im1 = im1[100:400, 310:330]
+im1 = cv2.imread('transform090.png', cv2.IMREAD_ANYDEPTH)
+val_midas = []
 
-t = np.shape(img)
-
-L1 = img.flatten().tolist()       #image converti en vecteur
-L2 = im1.flatten().tolist()       #image converti en vecteur
+for i in range(576):
+    val_truth.append(img[i][320])
+    val_midas.append(img[i][320])
 
 #cémoche beurk
-plt.scatter(L1, L2)
+plt.scatter(val_truth, val_midas)
 plt.show()
         
         

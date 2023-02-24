@@ -1,7 +1,6 @@
 #Main for run MiDaS model
 
 import run_vid
-import run_seq
 import argparse
 import torch
 

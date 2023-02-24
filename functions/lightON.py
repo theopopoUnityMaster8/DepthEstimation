@@ -7,9 +7,9 @@ import cv2
 
 #############################################################################
 # SECTION image path / name         MODIFICATION NECESSAIRE    
-file_path = './Evaluation/'         
-input_name = 'depth090.png'         
-output_name = 'upgrade090.png'      
+file_path = '../inTraitement/'         
+input_name = 'depth078.png'         
+output_name = 'upgrade001.png'      
 #############################################################################"
 
 #Lire en uint16
